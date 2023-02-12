@@ -5,5 +5,5 @@
  * @author darla
  *
  */
-module dej_Bank {
+module DeJBank {
 }

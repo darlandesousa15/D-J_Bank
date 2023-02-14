@@ -13,11 +13,12 @@ public class TestaMetodos {
 		System.out.println(conseguiuSacar);
 		
 		Conta contaJanaina = new Conta();
+		contaJanaina.titular = "Janaina Manoel";
 		contaJanaina.saldo = 2000;;
-		
-		if(contaJanaina.transfere(1500, contaDarlan)) {
+		boolean tranferindo = contaJanaina.transfere(1500, contaDarlan);
+		if(tranferindo) {
 			System.out.println("Saque realizado com sucesso");
-			System.out.println("Saldo janaina " + contaJanaina.saldo);
+			System.out.println("Saldo " + contaJanaina.titular + " " + contaJanaina.saldo);
 			System.out.println("saldo Darlan " + contaDarlan.saldo);
 		} else {
 			System.out.println("Saldo insuficiente");

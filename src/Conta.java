@@ -4,7 +4,7 @@ public class Conta {
 	double salario;
 	int agencia;
 	int numero;
-	String titular;
+	Cliente titular;
 	// Atributo são caracteristicas que especificam uma classe
 	// Os atributos ou campos propiedades são as caracteristicas de um objeto, tudo
 	// aqui dentro são atributos
@@ -31,5 +31,4 @@ public class Conta {
 		}
 		return false;
 	}
-
 }

@@ -9,10 +9,11 @@ public class clinteConta {
 		darlan.profissao = "Programador";
 		
 		Conta contaDoDarlan = new Conta();
-		contaDoDarlan.saldo = 4000;
+		contaDoDarlan.deposita(4000);
 		
+
 		System.out.println(darlan.nome);
-		System.out.println(contaDoDarlan.saldo);
+		System.out.println(contaDoDarlan.pegaSaldo());
 		contaDoDarlan.titular = darlan;
 		System.out.println(contaDoDarlan.titular.nome);
 		

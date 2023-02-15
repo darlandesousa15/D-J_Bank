@@ -3,16 +3,16 @@ public class CriaConta {
 	public static void main(String[] args) {
 
 		Conta primeiraConta = new Conta();
-		primeiraConta.saldo = 4000;
-		System.out.println("Saldo da 1ª conta " + primeiraConta.saldo);
+		primeiraConta.deposita(4000);
+		System.out.println("Saldo da 1ª conta " + primeiraConta.pegaSaldo());
 		// System.out.println(primeiraConta.agencia);
 		// System.out.println(primeiraConta.numero);
 
 		Conta segundaConta = new Conta();
-		segundaConta.saldo = 4000;
-		System.out.println("Saldo da 2ª conta " + segundaConta.saldo);
+		segundaConta.deposita(4000);
+		System.out.println("Saldo da 2ª conta " + segundaConta.pegaSaldo());
 
-		if (primeiraConta.saldo == segundaConta.saldo) {
+		if (primeiraConta.pegaSaldo() == segundaConta.pegaSaldo()) {
 			System.out.println("Valor dos saldos das consta são iguais");
 		} else {
 			System.out.println("Valores diferentes");

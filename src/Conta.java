@@ -1,6 +1,6 @@
 public class Conta {
 
-	double saldo;
+	private double saldo;
 	double salario;
 	int agencia;
 	int numero;
@@ -31,4 +31,10 @@ public class Conta {
 		}
 		return false;
 	}
+	
+	//Isso é um methodo e que ao ser envocado obigatoriamente tem que usar os ()
+	public double pegaSaldo() {
+		return this.saldo;
+	}
+	
 }

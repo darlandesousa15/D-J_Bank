@@ -6,7 +6,7 @@ public class clinteConta {
 		Cliente darlan = new Cliente();
 		darlan.nome = "Darlan de Sousa";
 		darlan.cpf = "000.000.000-00";
-		darlan.profissao = "Autonomo";
+		darlan.profissao = "Programador";
 		
 		Conta contaDoDarlan = new Conta();
 		contaDoDarlan.saldo = 4000;

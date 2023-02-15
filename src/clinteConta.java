@@ -13,7 +13,7 @@ public class clinteConta {
 		
 
 		System.out.println(darlan.nome);
-		System.out.println(contaDoDarlan.pegaSaldo());
+		System.out.println(contaDoDarlan.getSaldo());
 		contaDoDarlan.titular = darlan;
 		System.out.println(contaDoDarlan.titular.nome);
 		

@@ -33,7 +33,7 @@ public class Conta {
 	}
 	
 	//Isso é um methodo e que ao ser envocado obigatoriamente tem que usar os ()
-	public double pegaSaldo() {
+	public double getSaldo() {
 		return this.saldo;
 	}
 	

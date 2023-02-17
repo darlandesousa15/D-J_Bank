@@ -3,7 +3,9 @@ public class Funcionario {
 	private String nome;
 	private String cpf;
 	private double salario;
+
 	
+	// esse public funcionario é um construtor que caso eu ñ crie ele é criado automaticamente mas ñ mostrado aqui
 	public Funcionario() {
 		
 	}

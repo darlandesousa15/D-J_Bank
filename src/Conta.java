@@ -9,6 +9,10 @@ public class Conta {
 	// Os atributos ou campos propiedades são as caracteristicas de um objeto, tudo
 	// aqui dentro são atributos
 
+	public void salario() {
+		salario = 500;
+	}
+	
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}

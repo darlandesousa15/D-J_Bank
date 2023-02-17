@@ -1,7 +1,7 @@
 public class Conta {
 
 	private double saldo;
-	double salario;
+	private double salario;
 	int agencia;
 	int numero;
 	Cliente titular;
@@ -20,8 +20,16 @@ public class Conta {
 		} else {
 			return false;
 		}
-
 	}
+	
+	public double getSalario() {
+		return this.salario;
+	}
+	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
 
 	public boolean transfere(double valor, Conta destino) {
 		if (this.saldo >= valor) {

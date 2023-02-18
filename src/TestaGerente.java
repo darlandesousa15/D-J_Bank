@@ -21,6 +21,7 @@ public class TestaGerente {
 		System.out.println(d1.getBonificacao());
 		System.out.println("Salario com a bonificação: " + (d1.getSalario() + d1.getBonificacao()));
 		
+		
 	}
 	
 }

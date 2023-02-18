@@ -2,8 +2,8 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	protected double salario;
-	// faz com que o atributo seja public para as classes filhas, somente elas.
+	private double salario;
+	// Ao utilizar o protected faz com que o atributo seja public para as classes filhas, somente elas.
 
 	
 	// esse public funcionario é um construtor que caso eu ñ crie ele é criado automaticamente mas ñ mostrado aqui

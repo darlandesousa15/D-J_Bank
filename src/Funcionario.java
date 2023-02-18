@@ -2,7 +2,8 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	private double salario;
+	protected double salario;
+	// faz com que o atributo seja public para as classes filhas, somente elas.
 
 	
 	// esse public funcionario é um construtor que caso eu ñ crie ele é criado automaticamente mas ñ mostrado aqui
@@ -11,7 +12,7 @@ public class Funcionario {
 	}
 	
 	public double getBonificacao() {
-		return this.salario * 0.1;
+		return this.salario * 0.05;
 	}
 	
 	public String getNome() {

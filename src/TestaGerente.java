@@ -6,7 +6,7 @@ public class TestaGerente {
 		Gerente d1 = new Gerente();
 		d1.setCpf("000.555.777-92");
 		d1.setNome("Marculino Afonso");
-		d1.setSalario(5500);
+		d1.setSalario(8800);
 	
 		System.out.println(d1.getNome());
 		System.out.println(d1.getCpf());
@@ -18,6 +18,8 @@ public class TestaGerente {
 		System.out.println(autentica);
 		// ambos as duas estão certas para o mesmo resultado, entretando o de cima precisa de duas linhas
 		System.out.println(d1.autentica(2223));
+		System.out.println(d1.getBonificacao());
+		System.out.println("Salario com a bonificação: " + (d1.getSalario() + d1.getBonificacao()));
 		
 	}
 	

@@ -19,8 +19,10 @@ public class Gerente extends Funcionario {
 		return false;
 	}
 
-//	public double getBonificacao() {
-//		return this.salario;
-//	}
+	public double getBonificacao() {
+		return super.getBonificacao() + super.salario;
+		// O super esta substituindo o this nesse metodo pq o salario e o getbonificação estão na classe mãe
+		// e o super faz olhar para a classe mãe onde foi armazenado esses dados, por isso estamos usando o super ñ o this aqui.
+	}
 
 }

@@ -14,7 +14,8 @@ public class TestaGerente {
 		
 		d1.setSenha(2222);
 		
-
+		boolean autentica = d1.autentica(2273);
+		System.out.println(autentica);
 		// ambos as duas estão certas para o mesmo resultado, entretando o de cima precisa de duas linhas
 		System.out.println(d1.autentica(2223));
 		

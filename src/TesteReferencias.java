@@ -18,8 +18,8 @@ public class TesteReferencias {
 		c.registro(g);
 		c.registro(f);
 		c.registro(e);
-		
-		System.out.println(c.getSoma());
+
+
 	}
 
 }

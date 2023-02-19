@@ -16,7 +16,7 @@ public class Conta {
 		Conta.total++;
 		this.agencia = agencia;
 		this.numero = numero;
-		this.saldo = 100;
+		this.saldo = 0;
 		if (numero <= 0 || agencia <= 0) {
 			System.out.println("O número da conta e agencia não pode ser negativa. Altere para positivos");
 		}

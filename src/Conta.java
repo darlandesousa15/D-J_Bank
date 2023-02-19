@@ -9,11 +9,14 @@ public class Conta {
 	// Atributo são caracteristicas que especificam uma classe
 	// Os atributos ou campos propiedades são as caracteristicas de um objeto, tudo
 	// aqui dentro são atributos
+	// Um construtor padrão seria Public Conta(){}
 
+	// Esse abaixo é o construtor especifico dessa classe
 	public Conta (int agencia, int numero) {
 		Conta.total++;
 		this.agencia = agencia;
 		this.numero = numero;
+		this.saldo = 100;
 		if (numero <= 0 || agencia <= 0) {
 			System.out.println("O número da conta e agencia não pode ser negativa. Altere para positivos");
 		}

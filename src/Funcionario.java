@@ -11,9 +11,10 @@ public abstract class Funcionario {
 		
 	}
 	
-	public double getBonificacao() {
-		return this.salario * 0.05;
-	}
+	//Metodo abstrato não possui corpo, mas obrigatorio a classe filha tem que ter um getBonificacao
+	public abstract double getBonificacao();
+	//	return this.salario * 0.05;
+	
 	
 	public String getNome() {
 		return nome;

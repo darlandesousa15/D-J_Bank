@@ -7,6 +7,9 @@ public class TesteReferencias {
 		g.setNome("Darlan de Sousa");
 		System.out.println(g.getNome());
 		g.setSalario(5000);
+		
+		Administrador f = new Administrador();
+		f.setSalario(3500);
 
 		Design b1 = new Design();
 		b1.setSalario(2500);
@@ -18,6 +21,9 @@ public class TesteReferencias {
 		c.registro(g);
 		c.registro(b1);
 		c.registro(e);
+		c.registro(f);
+		
+		System.out.println(f.getBonificacao());
 
 	}
 

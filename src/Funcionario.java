@@ -11,7 +11,7 @@ public abstract class Funcionario {
 		
 	}
 	
-	//Metodo abstrato não possui corpo, mas obrigatorio a classe filha tem que ter um getBonificacao
+	//Metodo abstrato não possui corpo e não poderá ter e obrigatoriamente a classe filha tem que ter um getBonificacao
 	public abstract double getBonificacao();
 	//	return this.salario * 0.05;
 	

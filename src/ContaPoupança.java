@@ -5,4 +5,8 @@ public class ContaPoupança extends Conta{
 		super(agencia, numero);
 	}
 	
+	public void deposita (double valor) {
+		super.saldo += valor;
+	}
+
 }

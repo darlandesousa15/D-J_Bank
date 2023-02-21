@@ -13,7 +13,12 @@ public class ContaCorrente extends Conta {
 	@Override
 	public boolean saca(double valor) {
 		double ValoraSacar = valor + 0.2;
+		// Taxa de cobrança de 0,20 por saque
 		return super.saca(ValoraSacar);
+	}
+	
+	public void deposita (double valor) {
+		super.saldo += valor;
 	}
 
 }

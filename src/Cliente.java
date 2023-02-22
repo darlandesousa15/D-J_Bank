@@ -1,9 +1,20 @@
-public class Cliente {
+public class Cliente implements Autenticavel {
 
 	private String nome;
 	private String cpf;
 	private String profissao;
+	private int senha;
 	
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
+	
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		}
+		return false;
+	}
 	public String getNome() {
 		return nome;
 	}

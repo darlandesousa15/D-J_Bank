@@ -15,6 +15,11 @@ public class TestaGetseSet {
 		System.out.println(conta.getTitular().getNome());
 		conta.getTitular().setNome("Albino");
 		System.out.println(conta.getTitular().getNome());
+		contaCliente.setSenha(2222);
+		
+		SistemaInterno si = new SistemaInterno();
+		si.autentica(contaCliente);
+		
 		
 	}
 

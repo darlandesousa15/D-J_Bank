@@ -3,12 +3,12 @@ public class SistemaInterno {
 
 	private int senha = 2222;
 	
-	public void autentica(FuncionarioAutenticavel g) {
+	public void autentica(Autenticavel g) {
 		boolean autenticou = g.autentica(this.senha);
 		if(autenticou) {
-			System.out.println("deu certo");
+			System.out.println("Senha correta");
 		}else {
-			System.out.println("Não deu certo");
+			System.out.println("Senha Incorreta");
 		}
 	}
 }

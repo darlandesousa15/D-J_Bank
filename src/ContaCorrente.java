@@ -1,5 +1,5 @@
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel{
 
 	// Quando criamos uma classe filha ela não usa o construtor da classe mãe
 
@@ -10,15 +10,21 @@ public class ContaCorrente extends Conta {
 		super(agencia, numero);
 	}
 	
+	public void deposita (double valor) {
+		super.saldo += valor;
+	}
+	
 	@Override
 	public boolean saca(double valor) {
 		double ValoraSacar = valor + 0.2;
 		// Taxa de cobrança de 0,20 por saque
 		return super.saca(ValoraSacar);
 	}
-	
-	public void deposita (double valor) {
-		super.saldo += valor;
+
+	@Override
+	public double getValorImposto() {
+		return super.saldo * 0.01;
 	}
+	
 
 }

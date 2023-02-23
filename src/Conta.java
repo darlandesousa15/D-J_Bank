@@ -21,7 +21,6 @@ public abstract class Conta {
 		if (numero <= 0 || agencia <= 0) {
 			System.out.println("O número da conta e agencia não pode ser negativa. Altere para positivos");
 		}
-		System.out.println("Criando conta");
 	}
 	
 	public abstract void deposita(double valor);

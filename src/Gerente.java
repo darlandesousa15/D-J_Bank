@@ -1,11 +1,13 @@
 // Gerente é um Funcionario, Gerente herda da classe Funcionario
 public class Gerente extends Funcionario implements Autenticavel {
 
+	private ValidandoAutenticavel validando;
+
 	public Gerente() {
 
-	}
+		this.validando = new ValidandoAutenticavel();
 
-	private int senha;
+	}
 
 	public double getBonificacao() {
 		System.out.println("Chamando o metodo do gerente");
@@ -19,14 +21,11 @@ public class Gerente extends Funcionario implements Autenticavel {
 	}
 
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.validando.setSenha(senha);
 	}
 
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		}
-		return false;
+		return this.validando.autentica(senha);
 	}
 
 }

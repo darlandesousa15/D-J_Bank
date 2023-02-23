@@ -1,19 +1,23 @@
-public class Cliente implements Autenticavel {
+public class Cliente implements Autenticavel{
 
 	private String nome;
 	private String cpf;
 	private String profissao;
-	private int senha;
+	private ValidandoAutenticavel validando;
+	
+	public Cliente() {
+		
+		this.validando = new ValidandoAutenticavel ();
+		
+	}
 	
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.validando.setSenha(senha);
 	}
 	
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		}
-		return false;
+		boolean autenticou = this.validando.autentica(senha);
+		return autenticou;
 	}
 	public String getNome() {
 		return nome;

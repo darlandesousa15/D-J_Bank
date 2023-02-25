@@ -1,5 +1,5 @@
 
-public class Fluxo {
+public class FluxoComErro {
 
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
@@ -24,8 +24,10 @@ public class Fluxo {
 
 	private static void metodo2() {
         System.out.println("Ini do metodo2");
+        metodo2();
+        System.out.println("Ini do metodo2");
         
-        throw new MinhasEcxecoes ("teve muitos erro");
+        //throw new MinhasEcxecoes ("teve muitos erro");
         // o throw só funciona com exceções e significa jogar ela
         
         //System.out.println("Fim do metodo2");

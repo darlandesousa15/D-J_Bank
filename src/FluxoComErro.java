@@ -3,16 +3,17 @@ public class FluxoComErro {
 
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
-			try {
-	    // o try aponta onde esta o código perigoso onde pode ter o erro
+		try {
+			// o try aponta onde esta o código perigoso onde pode ter o erro
 			metodo1();
-        } catch (ArithmeticException | MinhasEcxecoes ex) {
-        // o catch captura o possível codigo perigoso e ao final noromalmente sempre usa o ex
-        	System.out.println("ArithmeticException");
-        	String msg = ex.getMessage();
-        	System.out.println("Exception " + msg);
-        	ex.printStackTrace();
-        }
+		} catch (ArithmeticException | MinhasEcxecoes ex) {
+			// o catch captura o possível codigo perigoso e ao final noromalmente sempre usa
+			// o ex
+			System.out.println("ArithmeticException");
+			String msg = ex.getMessage();
+			System.out.println("Exception " + msg);
+			ex.printStackTrace();
+		}
 		System.out.println("Fim do main");
 	}
 
@@ -23,13 +24,13 @@ public class FluxoComErro {
 	}
 
 	private static void metodo2() {
-        System.out.println("Ini do metodo2");
-        metodo2();
-        System.out.println("Ini do metodo2");
-        
-        //throw new MinhasEcxecoes ("teve muitos erro");
-        // o throw só funciona com exceções e significa jogar ela
-        
-        //System.out.println("Fim do metodo2");
-    }
+		System.out.println("Ini do metodo2");
+		metodo2();
+		System.out.println("Ini do metodo2");
+
+		// throw new MinhasEcxecoes ("teve muitos erro");
+		// o throw só funciona com exceções e significa jogar ela
+
+		// System.out.println("Fim do metodo2");
+	}
 }

@@ -6,7 +6,8 @@ public class Fluxo {
 			try {
 	    // o try aponta onde esta o código perigoso onde pode ter o erro
 			metodo1();
-        } catch (ArithmeticException | MinhasEcxecoes ex) {
+		} catch (Exception ex) {
+			// o uso do exception aqui faz com que não seja preciso ter que colocar varios excetion ou seja é um genério ja para todos
         // o catch captura o possível codigo perigoso e ao final noromalmente sempre usa o ex
         	System.out.println("ArithmeticException");
         	String msg = ex.getMessage();

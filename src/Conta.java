@@ -6,14 +6,15 @@ public abstract class Conta {
 	private int numero;
 	private Cliente titular;
 	private static int total;
-	// static é para indicar que é da classe não do objeto, stati é um atributo da classe
+	// static é para indicar que é da classe não do objeto, stati é um atributo da
+	// classe
 	// Atributo são caracteristicas que especificam uma classe
 	// Os atributos ou campos propiedades são as caracteristicas de um objeto, tudo
 	// aqui dentro são atributos
 	// Um construtor padrão seria Public Conta(){}
 
 	// Esse abaixo é o construtor especifico dessa classe
-	public Conta (int agencia, int numero) {
+	public Conta(int agencia, int numero) {
 		Conta.total++;
 		this.agencia = agencia;
 		this.numero = numero;
@@ -22,26 +23,19 @@ public abstract class Conta {
 			System.out.println("O número da conta e agencia não pode ser negativa. Altere para positivos");
 		}
 	}
-	
+
 	public abstract void deposita(double valor);
 
-	public boolean saca(double valor) {
-		if (this.saldo >= valor) {
-			this.saldo -= valor;
-			return true;
-		} else {
-			return false;
+	public void saca(double valor) {
+		if (this.saldo < valor) {
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + " valor: " + valor);
 		}
-
+		this.saldo -= valor;
 	}
 
-	public boolean transfere(double valor, Conta destino) {
-		if (this.saldo >= valor) {
-			saca(valor);
-			destino.deposita(valor);
-			return true;
-		}
-		return false;
+	public void transfere(double valor, Conta destino) {
+		this.saca(valor);
+		destino.deposita(valor);
 	}
 
 	// Isso é um methodo e que ao ser envocado obigatoriamente tem que usar os ()
@@ -80,7 +74,7 @@ public abstract class Conta {
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
-	
+
 	public static int getTotal() {
 		return Conta.total;
 	}

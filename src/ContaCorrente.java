@@ -15,10 +15,10 @@ public class ContaCorrente extends Conta implements Tributavel{
 	}
 	
 	@Override
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		double ValoraSacar = valor + 0.2;
 		// Taxa de cobrança de 0,20 por saque
-		return super.saca(ValoraSacar);
+		super.saca(ValoraSacar);
 	}
 
 	@Override

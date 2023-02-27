@@ -1,14 +1,16 @@
 public class TesteContas {
 
-	public static void main(String[] args) {
-		
-		Conta conta = new ContaCorrente(2252, 9871);
-		
-		conta.deposita(200);
-		conta.saca(220);
-		
-		System.out.println(conta.getSaldo());
-		
+	public static void main(String[] args) throws SaldoInsuficienteException {
+
+		Conta brabo = new ContaCorrente(2252, 9871);
+
+		brabo.deposita(200);
+
+		ContaCorrente darlan = new ContaCorrente(2151, 9874);
+
+		darlan.deposita(800);
+		darlan.transfere(200, brabo);
+
 	}
 
 }

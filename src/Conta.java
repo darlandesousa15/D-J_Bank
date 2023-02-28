@@ -19,8 +19,8 @@ public abstract class Conta {
 		this.agencia = agencia;
 		this.numero = numero;
 		this.saldo = 0;
-		if (numero <= 0 || agencia <= 0) {
-			System.out.println("O número da conta e agencia não pode ser negativa. Altere para positivos");
+		if (numero < 1 || agencia < 1) {
+			throw new ProibidoNegativoException("O número da conta e agencia não pode ser negativa. Altere para positivos");
 		}
 	}
 

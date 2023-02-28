@@ -5,9 +5,14 @@ public class TestaConexao {
 
 		try (Conexao conexao = new Conexao()) {
 			conexao.leDados();
-		} catch (Exception ex){
+		} catch (Exception ex) {
 			System.out.println("Deu erro");
 		}
+		// Esse de cima é o mesmo de baixo mas da maneira atualizada e mais facil de
+		// escrever e entender
+
+		// -----------------------------------------------------------------------------------
+
 		/*
 		 * Conexao con = null;
 		 * 
@@ -16,8 +21,11 @@ public class TestaConexao {
 		 * 
 		 * } finally { // esse bloco finally sempre será executado independente do que
 		 * aconteça con.fecha(); }
-		 */
-
+		 */ 
+		
+		ContaCorrente dd = new ContaCorrente(-9000, 5000);
+		dd.deposita(500);
+		
 	}
 
 }

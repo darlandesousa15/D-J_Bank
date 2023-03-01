@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestandoListas {
 
@@ -14,7 +15,9 @@ public class TestandoListas {
 		cliente.add(cliente2);
 		cliente.add(cliente3);
 		
-		
+		System.out.println(cliente + " Antes");
+		Collections.sort(cliente);
+		System.out.println(cliente + " Depois");
 		
 	}
 	

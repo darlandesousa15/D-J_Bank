@@ -4,7 +4,7 @@ public abstract class Conta {
 	protected double saldo;
 	private int agencia;
 	private int numero;
-	private Cliente titular;
+	private String titular;
 	private static int total;
 	// static é para indicar que é da classe não do objeto, stati é um atributo da
 	// classe
@@ -67,12 +67,12 @@ public abstract class Conta {
 		this.agencia = agencia;
 	}
 
-	public Cliente getTitular() {
+	public String getTitular() {
 		return titular;
 	}
 
-	public void setTitular(Cliente titular) {
-		this.titular = titular;
+	public void setTitular(String Diego) {
+		this.titular = Diego;
 	}
 
 	public static int getTotal() {

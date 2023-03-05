@@ -4,6 +4,7 @@ public class Cliente implements Autenticavel {
 	private String cpf;
 	private String profissao;
 	private ValidandoAutenticavel validando;
+	private int idade;
 
 	public Cliente() {
 
@@ -42,6 +43,10 @@ public class Cliente implements Autenticavel {
 
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
+	}
+	
+	public int getIdade() {
+		return idade;
 	}
 
 }

@@ -21,6 +21,7 @@ public class TestandoListas {
 		 
 		System.out.println(cliente + " Antes");
 		Collections.sort(cliente);
+		// o Collections.sort(); faz com que ordene a classe em ordem alfabética
 		System.out.println(cliente + " Depois");
 		
 		ContaCorrente ketlen = new ContaCorrente(2050, 3060);

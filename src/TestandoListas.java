@@ -23,13 +23,11 @@ public class TestandoListas {
 		Collections.sort(cliente);
 		System.out.println(cliente + " Depois");
 		
-		ContaPoupança diego = new ContaPoupança(2040, 3060);
+		ContaCorrente ketlen = new ContaCorrente(2050, 3060);
+		ContaCorrente diego = new ContaCorrente(2060, 6451);
+		ContaCorrente darlan = new ContaCorrente(2060, 9878);
 		
-		diego.deposita(1000);
-		diego.setTitular("Diego");
-		
-		System.out.println("Titular: " + diego.getTitular());
-		System.out.println("Saldo: " + diego.saldo);
+		Cliente didi = new Cliente("cliente3", 27);
 		
 	}
 }

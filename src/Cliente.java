@@ -25,6 +25,15 @@ public class Cliente implements Autenticavel {
 		return nome;
 	}
 
+	public int getIdade() {
+		return idade;
+	}
+
+	public Cliente(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -45,8 +54,8 @@ public class Cliente implements Autenticavel {
 		this.profissao = profissao;
 	}
 	
-	public int getIdade() {
-		return idade;
-	}
+
+	
+	
 
 }

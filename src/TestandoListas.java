@@ -29,5 +29,15 @@ public class TestandoListas {
 		
 		Cliente didi = new Cliente("cliente3", 27);
 		
+		ketlen.deposita(500);
+		ketlen.setTitular("Ketlen da Silva");
+		diego.deposita(1000);
+		diego.setTitular("Diego de Souza");
+		darlan.deposita(2250);
+		darlan.setTitular("Darlan de Sousa");
+		
+		System.out.println("Saldo do(a) " + ketlen.getTitular() + ": " + ketlen.getSaldo());
+		System.out.println("Saldo do(a) " + diego.getTitular() + ": " + diego.getSaldo());
+		System.out.println("Saldo do(a) " + darlan.getTitular() + ": " + darlan.getSaldo());
 	}
 }

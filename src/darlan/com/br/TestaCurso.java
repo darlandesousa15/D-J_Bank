@@ -22,6 +22,7 @@ public class TestaCurso {
 		Collections.sort(curso);
 		System.out.println("Depois " + curso);
 
+
 	}
 
 }

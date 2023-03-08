@@ -1,8 +1,9 @@
+package darlan.com.br;
 
 public class Aula {
 	
-	String curso;
-	int tempo;
+	private String curso;
+	private int tempo;
 
 	public Aula(String curso, int tempo) {
 		this.curso = curso;

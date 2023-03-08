@@ -1,6 +1,7 @@
 package darlan.com.br;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TestaCurso {
@@ -17,7 +18,9 @@ public class TestaCurso {
 		curso.add(curso2);
 		curso.add(curso3);
 		
-		
+		System.out.println("Antes " + curso);
+		Collections.sort(curso);
+		System.out.println("Depois " + curso);
 
 	}
 

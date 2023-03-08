@@ -8,6 +8,10 @@ public class TestaCurso {
 
 	public static void main(String[] args) {
 		
+		Curso javaColec = new Curso("Dominando coleções java", "Pedro Caieno");
+		
+		javaColec.getAulas().add(new Aula("Definindo funções", 20));
+		/*
 		String curso1 = "Definindo funções";
 		String curso2 = "Resolução de problemas orientado ao objeto";
 		String curso3 = "Design Thinking";
@@ -21,6 +25,8 @@ public class TestaCurso {
 		System.out.println("Antes " + curso);
 		Collections.sort(curso);
 		System.out.println("Depois " + curso);
+		*/
+		System.out.println(javaColec.getAulas());
 
 
 	}

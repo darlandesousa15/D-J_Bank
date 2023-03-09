@@ -1,7 +1,5 @@
 package darlan.com.br;
 
-import java.util.ArrayList;
-
 public class Aula implements Comparable<Aula> {
 
 	private String titulo;
@@ -11,7 +9,7 @@ public class Aula implements Comparable<Aula> {
 		this.titulo = titulo;
 		this.tempo = tempo;
 	}
-	
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -20,13 +18,13 @@ public class Aula implements Comparable<Aula> {
 		return tempo;
 	}
 
+	@Override
 	public String toString() {
 		return "[Aula: " + this.titulo + ", " + this.tempo + " minutos]";
 	}
-	@Override
-	public int compareTo(Aula o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
+	@Override
+	public int compareTo(Aula outraAula) {
+		return this.titulo.compareTo(outraAula.getTitulo());
+	}
 }

@@ -1,36 +1,23 @@
 package darlan.com.br;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class TestaCurso {
 
 	public static void main(String[] args) {
-		
-		Curso javaColec = new Curso("Dominando coleções java", "Pedro Caieno");
-		
-		javaColec.adiciona(new Aula("Definindo funções", 20));
-		javaColec.adiciona(new Aula("Utilizando Polimorfismo e heranças", 27));
-		javaColec.adiciona(new Aula("Modelando coleções", 22));
-		//javaColec.getAulas().add(new Aula("Definindo funções", 20));
-		/*
-		String curso1 = "Definindo funções";
-		String curso2 = "Resolução de problemas orientado ao objeto";
-		String curso3 = "Design Thinking";
-		
-		ArrayList<String> curso = new ArrayList<>();
-		
-		curso.add(curso1);
-		curso.add(curso2);
-		curso.add(curso3);
-		
-		System.out.println("Antes " + curso);
-		Collections.sort(curso);
-		System.out.println("Depois " + curso);
-		*/
-		System.out.println(javaColec.getAulas());
 
+		Curso javaColecoes = new Curso("Dominando as coleções do Java",
+				"Paulo Silveira");
+
+		javaColecoes.adiciona(new Aula("Trabalhando com ArrayList", 21));
+		javaColecoes.adiciona(new Aula("Criando uma Aula", 20));
+		javaColecoes.adiciona(new Aula("Modelando com coleções", 22));
+
+		List<Aula> aulas = javaColecoes.getAulas();
+
+		System.out.println(javaColecoes.getAulas());
+		
+		System.out.println(javaColecoes);
 
 	}
 

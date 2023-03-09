@@ -11,6 +11,8 @@ public class TestaCurso {
 		Curso javaColec = new Curso("Dominando coleções java", "Pedro Caieno");
 		
 		javaColec.adiciona(new Aula("Definindo funções", 20));
+		javaColec.adiciona(new Aula("Utilizando Polimorfismo e heranças", 27));
+		javaColec.adiciona(new Aula("Modelando coleções", 22));
 		//javaColec.getAulas().add(new Aula("Definindo funções", 20));
 		/*
 		String curso1 = "Definindo funções";

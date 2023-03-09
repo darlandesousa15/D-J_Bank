@@ -10,7 +10,8 @@ public class TestaCurso {
 		
 		Curso javaColec = new Curso("Dominando coleções java", "Pedro Caieno");
 		
-		javaColec.getAulas().add(new Aula("Definindo funções", 20));
+		javaColec.adiciona(new Aula("Definindo funções", 20));
+		//javaColec.getAulas().add(new Aula("Definindo funções", 20));
 		/*
 		String curso1 = "Definindo funções";
 		String curso2 = "Resolução de problemas orientado ao objeto";

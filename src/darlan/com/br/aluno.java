@@ -18,5 +18,10 @@ public class aluno {
 	public int getNumeroMatricula() {
 		return numeroMatricula;
 	}
+	
+
+	public String toString() {
+		return "[Aluno: " + this.nome + ", matricula: " + this.getNumeroMatricula() + " ]";
+	}
 
 }

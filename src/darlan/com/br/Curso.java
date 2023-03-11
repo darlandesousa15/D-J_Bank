@@ -48,5 +48,9 @@ public class Curso {
 		this.alunos.add(aluno);
 		
 	}
+	
+	public Set<aluno> getAlunos() {
+		return Collections.unmodifiableSet(alunos);
+	}
 
 }

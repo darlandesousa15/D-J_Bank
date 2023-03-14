@@ -6,9 +6,23 @@ public class aluno {
 	private int numeroMatricula;
 
 	public aluno(String nome, int numeroMatricula) {
+		if(nome == null) {
+			throw new NullPointerException("Obrigatório a defenir um nome");
+		}
 		this.nome = nome;
 		this.numeroMatricula = numeroMatricula;
 
+	}
+	
+	public boolean equals(Object obj) {
+		aluno outro = (aluno) obj;
+		return this.nome.equals(outro.nome);
+	}
+	
+	//Ao utilizar o equals para poder verificar se esse objeto é o mesmo objeto q estou procurando obrigatorio utilizar o hashcode tbm
+	//e como retorno do hashcode podemos usar o .hashcode que fica melhor para fazer a pesquisa internamente
+	public int hashCode() {
+		return super.hashCode();
 	}
 
 	public String getNome() {

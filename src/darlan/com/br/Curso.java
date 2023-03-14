@@ -52,5 +52,10 @@ public class Curso {
 	public Set<aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
 	}
+	public boolean estaMatriculado(aluno aluno) {
+		return this.alunos.contains(aluno);
+		// contains como o nome diz verificar dentro da lista se o elemento x está la
+	}
+
 
 }

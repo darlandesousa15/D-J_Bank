@@ -52,6 +52,7 @@ public class Curso {
 	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
 		this.matruculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
+		// o .put é igual ao add na coleção set list
 		
 	}
 	
@@ -63,7 +64,9 @@ public class Curso {
 		// contains como o nome diz verificar dentro da lista se o elemento x está la
 	}
 
-	public Aluno buscaMatriculado(int numero) {
+	public Aluno buscaMatriculado(int numero) throws NoSuchAlgorithmException {
+		if(!matruculaParaAluno.containsKey(numero))
+			throw new NoSuchAlgorithmException("Matricula não encontrada");
 		return matruculaParaAluno.get(numero);
 		
 	}

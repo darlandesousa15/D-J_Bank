@@ -1,9 +1,10 @@
 package darlan.com.br;
 
+import java.security.NoSuchAlgorithmException;
 
 public class TestaBuscaAlunos {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NoSuchAlgorithmException {
 		
 		Curso javaColecoes = new Curso("Dominando as coleções do Java", "Paulo Silveira");
 
@@ -24,7 +25,7 @@ public class TestaBuscaAlunos {
 		javaColecoes.matricula(a5);
 		
 		System.out.println("Quem é o aluno com matrciula 589741 ?");
-		Aluno aluno = javaColecoes.buscaMatriculado(589741);
+		Aluno aluno = javaColecoes.buscaMatriculado(58941);
 		System.out.println("Aluno: " + aluno);
 		
 	}

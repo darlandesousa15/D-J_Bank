@@ -1,11 +1,11 @@
 package darlan.com.br;
 
-public class aluno {
+public class Aluno {
 
 	private String nome;
 	private int numeroMatricula;
 
-	public aluno(String nome, int numeroMatricula) {
+	public Aluno(String nome, int numeroMatricula) {
 		if(nome == null) {
 			throw new NullPointerException("Obrigatório a defenir um nome");
 		}
@@ -15,7 +15,7 @@ public class aluno {
 	}
 	
 	public boolean equals(Object obj) {
-		aluno outro = (aluno) obj;
+		Aluno outro = (Aluno) obj;
 		return this.nome.equals(outro.nome);
 	}
 	

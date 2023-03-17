@@ -1,9 +1,12 @@
 package darlan.com.br;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Curso {
@@ -11,7 +14,9 @@ public class Curso {
 	private String nome;
 	private String instrutor;
 	private List<Aula> aulas = new LinkedList<Aula>();
-	private Set<aluno> alunos = new HashSet<>();
+	private Set<Aluno> alunos = new HashSet<>();
+	private Map<Integer, Aluno> matruculaParaAluno = new HashMap<>();
+	// Dado uma matricua me de um aluno
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
@@ -44,17 +49,23 @@ public class Curso {
 				+ ", aulas: + " + this.aulas + "]";
 	}
 
-	public void matricula(aluno aluno) {
+	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
+		this.matruculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
 		
 	}
 	
-	public Set<aluno> getAlunos() {
+	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
 	}
-	public boolean estaMatriculado(aluno aluno) {
+	public boolean estaMatriculado(Aluno aluno) {
 		return this.alunos.contains(aluno);
 		// contains como o nome diz verificar dentro da lista se o elemento x está la
+	}
+
+	public Aluno buscaMatriculado(int numero) {
+		return matruculaParaAluno.get(numero);
+		
 	}
 
 

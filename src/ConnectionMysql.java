@@ -8,8 +8,8 @@ public class ConnectionMysql {
 
 	public static void main(String[] args) throws SQLException {
 
-		Connection connection = DriverManager
-				.getConnection("jdbc:mysql://localhost/djbank?useTimezone=true&serverTimezone=UTC" , "root" , "9103-Darlan@");
+		CriaConexao criaConexao = new CriaConexao();
+		Connection connection = criaConexao.recuperarConexao(); 
 		
 		Statement stm = connection.createStatement();
 		stm.execute("SELECT * FROM tbcliente");

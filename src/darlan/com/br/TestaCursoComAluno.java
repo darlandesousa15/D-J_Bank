@@ -1,4 +1,6 @@
 package darlan.com.br;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class TestaCursoComAluno {
 
@@ -37,4 +39,5 @@ public class TestaCursoComAluno {
 
 	}
 
+	
 }

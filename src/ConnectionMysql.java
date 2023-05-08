@@ -4,8 +4,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectionMysql {
+	// esse representa o mesmo que o testalistagem
 
 	public static void main(String[] args) throws SQLException {
+		// ao utilizar os 2 Connection é necessário lançarmos uma excpetion
 
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao(); 

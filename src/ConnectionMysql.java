@@ -1,5 +1,4 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -8,8 +7,8 @@ public class ConnectionMysql {
 
 	public static void main(String[] args) throws SQLException {
 
-		CriaConexao criaConexao = new CriaConexao();
-		Connection connection = criaConexao.recuperarConexao(); 
+		ConnectionFactory connectionFactory = new ConnectionFactory();
+		Connection connection = connectionFactory.recuperarConexao(); 
 		
 		Statement stm = connection.createStatement();
 		stm.execute("SELECT * FROM tbcliente");

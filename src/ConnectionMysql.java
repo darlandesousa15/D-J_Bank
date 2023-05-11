@@ -27,6 +27,8 @@ public class ConnectionMysql {
 			System.out.println(nascimento);
 			String profissao = rst.getString("PROFISSAO");
 			System.out.println(profissao);
+			Integer id = rst.getInt("ID");
+			System.out.println(id);
 		}
 		
 		System.out.println("fechando conexão!");

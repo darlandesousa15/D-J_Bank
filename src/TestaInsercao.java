@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -7,16 +8,25 @@ public class TestaInsercao {
 
 	public static void main(String[] args) throws SQLException {
 
+		String nome = "";
+		String endereco = "";
+		String datanascimento = "";
+		String profissao = "";
+		
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
 		
-		Statement stm = connection.createStatement();
-
-		stm.execute("INSERT INTO tbcliente (NOME, CPF, ENDERECO1, DATA_NASCIMENTO, PROFISSAO) VALUES('Nando Reis Pires', '009.095.930-11', "
-				+ "'Rua 76 Quadra 20 lote 2 Ruranopolis - GO', '1993-02-26', 'Sapateiro')", Statement.RETURN_GENERATED_KEYS);
+		PreparedStatement stm = connection.prepareStatement("INSERT INTO tbcliente (nome, endereco, datanascimento, profissao)"
+				+ "VALUES(?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 		//Quando executar a inserção no banco de dados ele vai mostar o ID que foi gerado
-		ResultSet rst = stm.getGeneratedKeys();
+		stm.setString(1, nome);
+		stm.setString(2, endereco);
+		stm.setString(3, datanascimento);
+		stm.setString(4, profissao);
 		
+		stm.execute();
+		
+		ResultSet rst = stm.getGeneratedKeys();
 		//Esse resultset é para trazer o resultado ou seja o numero da id
 		while(rst.next()) {
 			Integer id = rst.getInt(1);
